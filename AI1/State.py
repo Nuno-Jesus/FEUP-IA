@@ -73,3 +73,13 @@ class State:
   #Override to compare objects
   def __eq__(this, other):
     return this.bucket1 == other.bucket1 and this.bucket2 == other.bucket2 and this.capacity1 == other.capacity1 and this.capacity2 == other.capacity2
+
+  def depth(this):
+    depth = 0
+    
+    state = this.previous
+    while state is not None:
+      state = state.previous
+      depth = depth + 1
+
+    return depth
