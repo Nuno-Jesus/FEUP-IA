@@ -36,52 +36,52 @@ class Boats:
   
   # Move 1 missionary from the destination to origin
   def M2(this):
-    return Boats(this.NC, this.NM - 1, 1, this.M, this.C, this)
+    return Boats(this.NC, this.NM + 1, 1, this.M, this.C, this)
   
   # Move 2 missionaries from the destination to origin
   def MM2(this):
-    return Boats(this.NC, this.NM - 2, 1, this.M, this.C, this)
+    return Boats(this.NC, this.NM + 2, 1, this.M, this.C, this)
   
   # Move 1 cannibal from the destination to origin
   def C2(this):
-    return Boats(this.NC - 1, this.NM, 1, this.M, this.C, this)
+    return Boats(this.NC + 1, this.NM, 1, this.M, this.C, this)
   
   # Move 2 cannibals from the destination to origin
   def CC2(this):
-    return Boats(this.NC - 2, this.NM, 1, this.M, this.C, this)
+    return Boats(this.NC + 2, this.NM, 1, this.M, this.C, this)
   
   # Move 1 missionary and 1 cannibal from the destination to origin
   def MC2(this):
-    return Boats(this.NC - 1, this.NM - 1, 1, this.M, this.C, this)
+    return Boats(this.NC + 1, this.NM + 1, 1, this.M, this.C, this)
 
   #! -------------------------------- PRECONDITIONS -------------------------------- !#
 
   def M1_precond(this):
-    return this.NB == 1 and this.NM >= 1 and this.NC <= this.NM - 1 and this.C - this.NC <= this.M - this.NM + 1 
+    return this.NB == 1 and this.NM >= 1 and (this.NC <= this.NM - 1 or this.NM == 1) and this.C - this.NC <= this.M - this.NM + 1 
 
   def MM1_precond(this):
-    return this.NB == 1 and this.NM >= 2 and this.NC <= this.NM - 2 and this.C - this.NC <= this.M - this.NM + 2
+    return this.NB == 1 and this.NM >= 2 and (this.NC <= this.NM - 2 or this.NM == 0) and this.C - this.NC <= this.M - this.NM + 2
 
   def C1_precond(this):
-    return this.NB == 1 and this.NC >= 1 and this.NC - 1 <= this.NM and this.C - this.NC + 1 <= this.M - this.NM
+    return this.NB == 1 and this.NC >= 1 and this.NC - 1 <= this.NM and (this.C - this.NC + 1 <= this.M - this.NM or this.M - this.NM == 0)
 
   def CC1_precond(this):
-    return this.NB == 1 and this.NC >= 2 and this.NC - 2 <= this.NM and this.C - this.NC + 2 <= this.M - this.NM
+    return this.NB == 1 and this.NC >= 2 and this.NC - 2 <= this.NM and (this.C - this.NC + 2 <= this.M - this.NM or this.M - this.NM == 0)
 
   def MC1_precond(this):
     return this.NB == 1 and this.NC >= 1 and this.NM >= 1 and this.NC - 1 <= this.NM - 1 and this.C - this.NC + 1 <= this.M - this.NM + 1
 
   def M2_precond(this):
-    return this.NB == 0 and this.M - this.NM >= 1 and this.C - this.NC <= this.M - this.NM - 1 and this.NC <= this.NM + 1 
+    return this.NB == 0 and this.M - this.NM >= 1 and (this.C - this.NC <= this.M - this.NM - 1 or this.M - this.NM == 0) and this.NC <= this.NM + 1 
 
   def MM2_precond(this):
-    return this.NB == 0 and this.M - this.NM >= 2 and this.C - this.NC <= this.M - this.NM - 2 and this.NC <= this.NM + 2 
+    return this.NB == 0 and this.M - this.NM >= 2 and (this.C - this.NC <= this.M - this.NM - 2 or this.M - this.NM == 0) and this.NC <= this.NM + 2 
 
   def C2_precond(this):
-    return this.NB == 0 and this.C - this.NC >= 1 and this.C - this.NC - 1 <= this.M - this.NM and this.NC + 1 <= this.NM
+    return this.NB == 0 and this.C - this.NC >= 1 and this.C - this.NC - 1 <= this.M - this.NM and (this.NC + 1 <= this.NM or this.NM == 0)
 
   def CC2_precond(this):
-    return this.NB == 0 and this.C - this.NC >= 2 and this.C - this.NC - 2 <= this.M - this.NM and this.NC + 2 <= this.NM  
+    return this.NB == 0 and this.C - this.NC >= 2 and this.C - this.NC - 2 <= this.M - this.NM and (this.NC + 2 <= this.NM or this.NM == 0) 
 
   def MC2_precond(this):
     return this.NB == 0 and this.C - this.NC >= 1 and this.M - this.NM >= 1 and this.C - this.NC - 1 <= this.M - this.NM - 1 and this.NC + 1 <= this.NM + 1
