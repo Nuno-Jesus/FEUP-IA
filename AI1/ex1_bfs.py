@@ -1,10 +1,10 @@
-from State import State
+from Buckets import Buckets
 
-current = State(4, 3, 0, 0, None)
+current = Buckets(4, 3, 0, 0, None)
 queue = [current]
 visited = []
 
-while current != State(4, 3, 2, 0, None):
+while current != Buckets(4, 3, 2, 0, None):
   current = queue.pop()
 
   if current in visited: 

@@ -1,19 +1,19 @@
-from State import State
+from Buckets import Buckets
 
 
 
-current = State(4, 3, 0, 0, None)
+current = Buckets(4, 3, 0, 0, None)
 queue = [current]
 visited = []
 current_depth = 0
 
-while current != State(4, 3, 2, 0, None):
+while current != Buckets(4, 3, 2, 0, None):
   current = queue.pop()
   
   #If the current node is in a higher depth of the maximum depth in this iteration
   if current.depth() > current_depth:
     #Reset the lists and initial state
-    current = State(4, 3, 0, 0, None)
+    current = Buckets(4, 3, 0, 0, None)
     queue = [current]
     visited = []
     

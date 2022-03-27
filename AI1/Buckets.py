@@ -1,4 +1,4 @@
-class State:
+class Buckets:
   def __init__ (this, capacity1, capacity2, bucket1, bucket2, previous):
     this.capacity1 = capacity1
     this.capacity2 = capacity2
@@ -8,43 +8,43 @@ class State:
 
   #Empty bucket 1
   def empty1(this):
-    return State(this.capacity1, this.capacity2, 0, this.bucket2, this)
+    return Buckets(this.capacity1, this.capacity2, 0, this.bucket2, this)
 
   #Empty bucket 2
   def empty2(this):
-    return State(this.capacity1, this.capacity2, this.bucket1, 0, this)
+    return Buckets(this.capacity1, this.capacity2, this.bucket1, 0, this)
 
   #Fill bucket 1
   def fill1(this):
-    return State(this.capacity1, this.capacity2, this.capacity1, this.bucket2, this)
+    return Buckets(this.capacity1, this.capacity2, this.capacity1, this.bucket2, this)
 
   #Fill bucket 2
   def fill2(this):
-    return State(this.capacity1, this.capacity2, this.bucket1, this.capacity2, this)
+    return Buckets(this.capacity1, this.capacity2, this.bucket1, this.capacity2, this)
 
   #Pour from 1 to 2 until 2 is full
   def pour12_until_2_is_full(this):
     c1 = this.bucket1 - (this.capacity2 - this.bucket2)
     c2 = this.capacity2
-    return State(this.capacity1, this.capacity2, c1, c2, this)
+    return Buckets(this.capacity1, this.capacity2, c1, c2, this)
 
   #Pour from 1 to 2 until 1 is empty
   def pour12_until_1_is_empty(this):
     c1 = 0
     c2 = this.bucket2 + this.bucket1
-    return State(this.capacity1, this.capacity2, c1, c2, this)
+    return Buckets(this.capacity1, this.capacity2, c1, c2, this)
 
   #Pour from 2 to 1 until 1 is full
   def pour21_until_1_is_full(this):
     c1 = this.capacity1
     c2 = this.bucket2 - (this.capacity1 - this.bucket1)
-    return State(this.capacity1, this.capacity2, c1, c2, this)
+    return Buckets(this.capacity1, this.capacity2, c1, c2, this)
 
   #Pour from 2 to 1 until 2 is empty
   def pour21_until_2_is_empty(this):
     c1 = this.bucket1 + this.bucket2
     c2 = 0
-    return State(this.capacity1, this.capacity2, c1, c2, this)
+    return Buckets(this.capacity1, this.capacity2, c1, c2, this)
 
   def fill1_precond(this):
     return this.bucket1 < this.capacity1
