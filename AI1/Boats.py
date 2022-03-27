@@ -54,5 +54,41 @@ class Boats:
   def MC2(this):
     return Boats(this.NC - 1, this.NM - 1, 1, this.M, this.C, this)
 
+  #! -------------------------------- PRECONDITIONS -------------------------------- !#
+
+  def M1_precond(this):
+    return this.NB == 1 and this.NM >= 1 and this.NC <= this.NM - 1 and this.C - this.NC <= this.M - this.NM + 1 
+
+  def MM1_precond(this):
+    return this.NB == 1 and this.NM >= 2 and this.NC <= this.NM - 2 and this.C - this.NC <= this.M - this.NM + 2
+
+  def C1_precond(this):
+    return this.NB == 1 and this.NC >= 1 and this.NC - 1 <= this.NM and this.C - this.NC + 1 <= this.M - this.NM
+
+  def CC1_precond(this):
+    return this.NB == 1 and this.NC >= 2 and this.NC - 2 <= this.NM and this.C - this.NC + 2 <= this.M - this.NM
+
+  def MC1_precond(this):
+    return this.NB == 1 and this.NC >= 1 and this.NM >= 1 and this.NC - 1 <= this.NM - 1 and this.C - this.NC + 1 <= this.M - this.NM + 1
+
+  def M2_precond(this):
+    return this.NB == 0 and this.M - this.NM >= 1 and this.C - this.NC <= this.M - this.NM - 1 and this.NC <= this.NM + 1 
+
+  def MM2_precond(this):
+    return this.NB == 0 and this.M - this.NM >= 2 and this.C - this.NC <= this.M - this.NM - 2 and this.NC <= this.NM + 2 
+
+  def C2_precond(this):
+    return this.NB == 0 and this.C - this.NC >= 1 and this.C - this.NC - 1 <= this.M - this.NM and this.NC + 1 <= this.NM
+
+  def CC2_precond(this):
+    return this.NB == 0 and this.C - this.NC >= 2 and this.C - this.NC - 2 <= this.M - this.NM and this.NC + 2 <= this.NM  
+
+  def MC2_precond(this):
+    return this.NB == 0 and this.C - this.NC >= 1 and this.M - this.NM >= 1 and this.C - this.NC - 1 <= this.M - this.NM - 1 and this.NC + 1 <= this.NM + 1
+
+  # Overriding equals function for equality
+  def __eq__(this, other):
+    return this.C == other.C and this.M == other.M and this.NC == other.NC and this.NM == other.NM and this.NB == other.NB
+
     
   
