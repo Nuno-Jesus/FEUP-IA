@@ -1,0 +1,66 @@
+15 10
+Anna 1
+C++ 2
+Bob 2
+HTML 5
+CSS 5
+Maria 1
+Python 3
+Charlie 1
+sql 10
+Fred 3
+C++ 3
+CSS 6
+Java 4
+Nuno 2
+sql 4
+Python 5
+Carlos 2
+C++ 3
+HTML 3
+Ana 1
+sql 10
+Vance 2
+C# 2
+R 3
+Sherman 1
+JavaScript 3
+Arthur 1
+MATLAB 4
+Conrad 1
+Perl 3
+Virgil 1
+Go 4
+Angus 1
+NoSQL 2
+Alexis 2
+C++ 2
+C 4
+Project1 5 10 5 1
+C++ 3
+Project2 7 10 7 2
+HTML 3
+C++ 2
+Project3 10 20 20 2
+Python 3
+HTML 3
+Project4 20 10 5 1
+sql 10
+Project5 10 10 20 2
+CSS 5
+C++ 1
+Project6 5 7 15 2
+HTML 5
+Java 4
+Project7 7 10 20 2
+Java 4
+Python 3
+Project8 10 10 20 1
+CSS 6
+Project9 7 12 9 3
+C# 2
+JavaScript 2
+NoSQL 2
+Project10 7 12 9 2
+R 3
+MATLAB 2
