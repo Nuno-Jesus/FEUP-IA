@@ -1,14 +1,8 @@
-# Artificial-Intelligence
+# IA
 
-## LEIC - 3rd year / 2nd semester
+This repository contains code developed by [me](https://sigarra.up.pt/feup/pt/fest_geral.cursos_list?pv_num_unico=201905477) in the pratical classes of the IA Curricular Unit in [2020/2021](https://sigarra.up.pt/feup/pt/ucurr_geral.ficha_uc_view?pv_ocorrencia_id=459468), including the final project also developed by [Carlos Veríssimo](https://sigarra.up.pt/feup/pt/fest_geral.cursos_list?pv_num_unico=201907716) and [Frederico Lopes](https://sigarra.up.pt/feup/pt/fest_geral.cursos_list?pv_num_unico=201904580).
 
-#### Course Page: https://sigarra.up.pt/feup/en/UCURR_GERAL.FICHA_UC_VIEW?pv_ocorrencia_id=484442
-
-## Projects
-#### First Project
-Solution for Google Hash Code utilizing optimization techniques such as Genetic Algorithms.
-
-#### Second Project
-Credit card fraud detection -  preparing the data and creating artificial intelligence models to determine if a given transaction is valid
-
-#### Final Grade: 18/20
+## Final Grade
+|Project 1|Project 2|Test 1|Test 2|Kahoots|FINAL|
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|19.0|18.5|11.2|17.0|19.5|17|
